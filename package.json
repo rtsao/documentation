@@ -50,7 +50,7 @@
     "tiny-lr": "^1.0.3",
     "unist-builder": "^1.0.0",
     "unist-util-visit": "^1.0.1",
-    "vfile": "^2.0.0",
+    "vfile": "^2.1.0",
     "vfile-reporter": "^3.0.0",
     "vfile-sort": "^2.0.0",
     "vinyl": "^2.0.0",
