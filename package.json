@@ -47,7 +47,7 @@
     "shelljs": "^0.7.5",
     "stream-array": "^1.1.0",
     "strip-json-comments": "^2.0.0",
-    "tiny-lr": "^1.0.3",
+    "tiny-lr": "1.0.4",
     "unist-builder": "^1.0.0",
     "unist-util-visit": "^1.0.1",
     "vfile": "^2.0.0",
