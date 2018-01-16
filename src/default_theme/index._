@@ -7,7 +7,6 @@
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
-  <link href='assets/split.css' type='text/css' rel='stylesheet' />
 </head>
 <body class='documentation m0'>
     <div class='flex'>
@@ -24,10 +23,11 @@
             <ul class='list-reset h5 py1-ul'>
               <% docs.forEach(function(doc) { %>
                 <% var hasMembers = doc.members.static.length || doc.members.instance.length %>
+                <% var displayName = getDisplayName(doc) %>
                 <li><a
                   href='#<%=slug(doc.namespace)%>'
-                  class="<% if (doc.kind === 'note') { %>h5 bold black caps<% } %><% if (hasMembers) { %> toggle-sibling<% } %>">
-                  <%- doc.name %>
+                  class="<% if (doc.kind === 'note') { %>h5 bold black<% } %><% if (hasMembers) { %> toggle-sibling<% } %>">
+                  <%- displayName %>
                   <% if (hasMembers) { %><span class='icon'>▸</span><% } %>
                 </a>
                 <% if (hasMembers) { %>
@@ -86,9 +86,6 @@
               <% }) %>
             </ul>
           </div>
-          <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
-          </div>
         </div>
       </div>
       <div id='split-right' class='relative overflow-auto height-viewport-100'>
@@ -101,13 +98,13 @@
               renderParamProperty: renderParamProperty
             }) %>
           <% } else { %>
+            <hr />
             <div class='keyline-top-not py2'><%=renderNote({ note: s })%></div>
           <% } %>
         <% }) %>
       </div>
     </div>
   <script src='assets/anchor.js'></script>
-  <script src='assets/split.js'></script>
   <script src='assets/site.js'></script>
 </body>
 </html>

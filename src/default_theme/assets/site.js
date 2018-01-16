@@ -113,20 +113,20 @@ split_left.style.overflow = 'hidden';
 var cw_without_sb = split_left.clientWidth;
 split_left.style.overflow = '';
 
-Split(['#split-left', '#split-right'], {
-  elementStyle: function(dimension, size, gutterSize) {
-    return {
-      'flex-basis': 'calc(' + size + '% - ' + gutterSize + 'px)'
-    };
-  },
-  gutterStyle: function(dimension, gutterSize) {
-    return {
-      'flex-basis': gutterSize + 'px'
-    };
-  },
-  gutterSize: 20,
-  sizes: [33, 67]
-});
+// Split(['#split-left', '#split-right'], {
+//   elementStyle: function(dimension, size, gutterSize) {
+//     return {
+//       'flex-basis': 'calc(' + size + '% - ' + gutterSize + 'px)'
+//     };
+//   },
+//   gutterStyle: function(dimension, gutterSize) {
+//     return {
+//       'flex-basis': gutterSize + 'px'
+//     };
+//   },
+//   gutterSize: 20,
+//   sizes: [33, 67]
+// });
 
 // Chrome doesn't remember scroll position properly so do it ourselves.
 // Also works on Firefox and Edge.

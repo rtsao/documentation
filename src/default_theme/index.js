@@ -36,6 +36,15 @@ module.exports = function(
 
   var sharedImports = {
     imports: {
+      getDisplayName(doc) {
+        return doc.tags ? doc.tags.reduce(
+                  (acc, tag) => {
+                    if (tag.title === 'exportName') {
+                      return tag.description;
+                    }
+                    return acc;
+                  }, doc.name) : doc.name;
+      },
       slug(str) {
         var slugger = new GithubSlugger();
         return slugger.slug(str);
